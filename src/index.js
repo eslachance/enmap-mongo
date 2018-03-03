@@ -17,7 +17,7 @@ class EnmapMongo {
     this.port = options.port || 27017;
     this.host = options.host || 'localhost';
 
-    this.url = options.url || `mongodb://${this.auth}${this.host}:${this.port}`;
+    this.url = options.url || `mongodb://${this.auth}${this.host}:${this.port}/${this.dbName}`;
   }
 
   /**
@@ -32,7 +32,6 @@ class EnmapMongo {
     for (const row of rows) {
       enmap.set(row._id, row.value);
     }
-    console.log(rows);
     this.ready();
     return this.defer;
   }
