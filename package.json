@@ -1,0 +1,31 @@
+{
+  "name": "enmap-mongo",
+  "version": "1.0.0",
+  "description": "A MongoDB provider for Enmap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eslachance/enmap-mongo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eslachance/enmap-mongo/issues"
+  },
+  "homepage": "https://github.com/eslachance/enmap-mongo#readme",
+  "keywords": [],
+  "author": "Evelyne Lachance <eslachance@gmail.com> (http://evie.codes/)",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
