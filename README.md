@@ -4,7 +4,7 @@ Enmap-Mongo is a provider for the [Enmap](https://www.npmjs.com/package/enmap) m
 
 ## Installation
 
-To install Enmap-BaseProvider simply run `npm i enmap-mongo`.
+To install Enmap-Mongo simply run `npm i enmap-mongo`.
 
 ## Usage
 
