@@ -36,7 +36,7 @@ const myColl = new Enmap({ provider: new EnmapMongo({ name: 'test' }); });
 // Example with all options.
 const level = new EnmapMongo({ 
   name: 'test',
-  collection: 'enmap',
+  dbName: 'enmap',
   user: 'username',
   pass: 'password',
   host: 'localhost',
@@ -48,18 +48,18 @@ const level = new EnmapMongo({
 // Example with full URL.
 const level = new EnmapMongo({ 
   name: 'test',
-  collection: 'enmap',
+  dbName: 'enmap',
   url: 'mongodb://username:password@localhost:27017/enmap'
 });
 ```
 
 ### name
 
-The `name` option is mandatory and defines the name of the table where the data is stored. 
+The `name` option is mandatory and defines the name of the collection where the data is stored. 
 
-### collection
+### dbName
 
-The `collection` is optional and defines the collection where data is stored. If multiple enmap instances connect to the same collection, the same collection is used with different table names. The default collection is `enmap`.
+The `dbName` is optional and defines the database where data is stored. If multiple enmap instances connect to the same database, the same database is used with different table collections. The default database is `enmap`.
 
 ### host
 
@@ -75,4 +75,4 @@ Optional, used for authentication. Needs both to work, or neither.
 
 ### url
 
-Optional. If used, the `host`, `port`, `user` and `pass` options are *ignored* , and `url` is used instead. Note that the `/collectionname` at the end of your url *must* correspond to the `collection` value (or `enmap`).
+Optional. If used, the `host`, `port`, `user` and `pass` options are *ignored* , and `url` is used instead. Note that the `/dbname` at the end of your url *must* correspond to the `dbName` value (or `enmap`).
