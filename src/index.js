@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-class EnmapMongo {
+class EnmapProvider {
 
   constructor(options) {
     this.defer = new Promise((resolve) => {
@@ -100,6 +100,14 @@ class EnmapMongo {
     this.name = this.name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
   }
 
+  /**
+   * Internal method used by Enmap to retrieve provider's correct version.
+   * @return {string} Current version number.
+   */
+  getVersion() {
+    return require('./package.json').version;
+  }
+
 }
 
-module.exports = EnmapMongo;
+module.exports = EnmapProvider;
