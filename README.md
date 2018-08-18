@@ -27,7 +27,7 @@ Shorthand declaration:
 ```js
 const Enmap = require('enmap');
 const EnmapMongo = require('enmap-mongo');
-const myColl = new Enmap({ provider: new EnmapMongo({ name: 'test' }); });
+const myColl = new Enmap({ provider: new EnmapMongo({ name: 'test' }) });
 ```
 
 ## Options
