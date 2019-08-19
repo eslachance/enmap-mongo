@@ -27,7 +27,7 @@ class EnmapProvider {
    */
   async init(enmap) {
     this.enmap = enmap;
-    this.client = await MongoClient.connect(this.url);
+    this.client = await MongoClient.connect(this.url, { useNewUrlParser: true,  useUnifiedTopology: true  });
     this.db = this.client.db(this.dbName).collection(this.name);
     if (this.fetchAll) {
       await this.fetchEverything();
@@ -67,7 +67,7 @@ class EnmapProvider {
     if (!key || !['String', 'Number'].includes(key.constructor.name)) {
       throw new Error('Keys should be strings or numbers.');
     }
-    this.db.update({ _id: key }, { _id: key, value: val }, { upsert: true });
+    return this.db.updateOne({ _id: key }, { $set: { _id: key, value: val } }, { upsert: true });
   }
 
   /**
@@ -76,7 +76,7 @@ class EnmapProvider {
    * @param {boolean} bulk Internal property used by the purge method.
    */
   delete(key) {
-    this.db.remove({ _id: key }, { single: true });
+    return this.db.remove({ _id: key }, { single: true });
   }
 
   hasAsync(key) {
