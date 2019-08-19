@@ -1,6 +1,6 @@
 {
   "name": "enmap-mongo",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "A MongoDB provider for Enmap",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "Evelyne Lachance <eslachance@gmail.com> (http://evie.codes/)",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^3.0.3"
+    "mongodb": "^3.3.0"
   },
   "devDependencies": {
     "eslint": "^4.8.0",
